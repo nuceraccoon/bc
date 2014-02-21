@@ -152,9 +152,9 @@ To create a website for a new bootcamp:
 
 ![Alt text](img/readme/step1.png)
 
-3.  Add the template repository `git@github.com:swcarpentry/bc.git` as a remote named `swcarpentry`:
+3.  Add the template repository `https://github.com/swcarpentry/bc.git` as a remote named `swcarpentry`:
 
-        git remote add swcarpentry git@github.com:swcarpentry/bc.git
+        git remote add swcarpentry https://github.com/swcarpentry/bc.git
 
 ![Alt text](img/readme/step2.png)
 
@@ -261,9 +261,7 @@ must define the following values in its YAML header:
     that should go in the main body of your page.
 *   `instructor` is a comma-separated list of instructor names.
     This *must* be enclosed in square brackets, as in
-    `["Alan Turing","Grace Hopper"]`,
-    and there must *not* be spaces after the commas
-    (really: believe it or not, they can cause translation to fail).
+    `["Alan Turing","Grace Hopper"]`
 *   `contact` is the contact email address to use for your bootcamp.
 
 Include Files
@@ -360,13 +358,14 @@ To send them to us as a pull request:
 1.  Fork the `bc` repository on GitHub.
 2.  Make that a remote named "upstream" of your local YYYY-MM-DD-site repository:
 
-        git remote add upstream git@github.com:<me>/bc.git
+        git remote add upstream https://github.com/<me>/bc.git
 
 (replacing 'me' with your GitHub username)
 
 ![Alt text](img/readme/step3.png)
 
-3.  Isolate the changes you want to share in a branch and push them to GitHub:
+3.  Isolate the changes you want to share in a branch and push them to GitHub
+    (you should have added `swcarpentry` as a remote in Step 3 of [Getting Started](#getting-started)):
 
         git fetch swcarpentry
         git checkout -t swcarpentry/gh-pages -b improvements
